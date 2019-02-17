@@ -12543,11 +12543,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\template\\small-assignment-2.csproj",
+      "projectUniqueName": "C:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\tinysoldiers\\small-assignment-2.csproj",
       "projectName": "small-assignment-2",
-      "projectPath": "c:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\template\\small-assignment-2.csproj",
+      "projectPath": "C:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\tinysoldiers\\small-assignment-2.csproj",
       "packagesPath": "C:\\Users\\pall_\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\template\\obj\\",
+      "outputPath": "C:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\tinysoldiers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

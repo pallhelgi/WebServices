@@ -1,12 +1,12 @@
-using template.Models;
+using tinysoldiers.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace template.Data
+namespace tinysoldiers.Data
 {
     public static class DataContext
     {
-        private static List<Model> _models = new List<Model> 
+        private static List<Model> _models = new List<Model>
         {
             new Model
             {
