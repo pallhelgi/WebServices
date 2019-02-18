@@ -1,6 +1,6 @@
 namespace tinysoldiers.Models
 {
-    public class Model
+    public class Model : HyperMediaModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
