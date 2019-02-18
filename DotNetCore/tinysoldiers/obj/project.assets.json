@@ -12543,9 +12543,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\tinysoldiers\\small-assignment-2.csproj",
-      "projectName": "small-assignment-2",
-      "projectPath": "C:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\tinysoldiers\\small-assignment-2.csproj",
+      "projectUniqueName": "C:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\tinysoldiers\\tinysoldiers.csproj",
+      "projectName": "tinysoldiers",
+      "projectPath": "C:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\tinysoldiers\\tinysoldiers.csproj",
       "packagesPath": "C:\\Users\\pall_\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\pall_\\Documents\\Web Services\\DotNetCore\\tinysoldiers\\obj\\",
       "projectStyle": "PackageReference",
