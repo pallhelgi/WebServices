@@ -18,23 +18,21 @@ namespace tinysoldiers.Controllers
         {
             double maxPages = Math.Ceiling(DataContext.Models.Count / (double)pageSize);
 
+            // PageNumber can not be higher than maximum number of pages
+            // Page number can not be less than 1
             if (pageNumber > maxPages || pageNumber < 1)
             {
                 // TODO: error handling
-                return null;
+                return BadRequest();
             }
 
-            //Initiating an empty list of ModelDTO that will be included in the envelope
+            // Initiating an empty list of ModelDTO that will be included in the envelope
             List<ModelDTO> modelDTOList = new List<ModelDTO>();
 
-            // 39 models
-            // 10 page PageSize
-            // 3 page PageNumber
-            // ceiling(39 / 10) = 4 models á page
-            //   sýna síðu þrjú, eða model frá 2 * 4 + 1 = 9 til og með 3 * 4 = 12
-
+            // Adding the correct page to a ModelDTO list to be added to the envelope
             for (int i = ((pageNumber - 1) * pageSize); i < pageNumber * pageSize; i++)
             {
+                // ToLightWeight changed Model to ModelDTO
                 modelDTOList.Add(DataContext.Models.ToLightWeight()[i]);
             }
 
@@ -43,13 +41,19 @@ namespace tinysoldiers.Controllers
             env.PageNumber = pageNumber;
             env.PageSize = pageSize;
             env.MaxPages = (int)maxPages;
+
             return Ok(env);
         }
 
         [HttpGet("{Id:int}")]
-        public IActionResult GetModelById([FromQuery] int Id)
+        public IActionResult GetModelById(int Id)
         {
-            return Ok();
+            List<ModelDetailsDTO> model = DataContext.Models.FindAll(x => x.Id == Id).ToDetails();
+            if (model.Count == 0)
+            {
+                return BadRequest();
+            }
+            return Ok(model[0]);
         }
     }
 }
