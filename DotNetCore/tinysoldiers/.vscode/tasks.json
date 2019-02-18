@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/small-assignment-2.csproj"
+                "${workspaceFolder}/tinysoldiers.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
