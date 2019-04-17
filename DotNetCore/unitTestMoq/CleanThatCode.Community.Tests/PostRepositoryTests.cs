@@ -21,6 +21,7 @@ namespace CleanThatCode.Community.Tests
         {
             cleanThatCodeDbContextMoq = new Mock<ICleanThatCodeDbContext>();
 
+            //Using NBuilder to create TestData in the test initaliaze to apply tests on
             cleanThatCodeDbContextMoq.Setup(method => method.Posts).Returns(
                 FizzWare.NBuilder.Builder<Post>
                 .CreateListOfSize(3)
