@@ -27,10 +27,11 @@ namespace CleanThatCode.Community.Tests
                     
         }
 
+        [TestMethod]
         public void GetAllCommentsByPostId_GivenValidPostId_ShouldReturnTwoComments()
         {
             var results = _commentRepo.GetAllCommentsByPostId(1);
-            Assert.AreEqual(2, results);
+            Assert.AreEqual(2, results.Count());
         }
     }
 }

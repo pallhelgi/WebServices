@@ -30,5 +30,12 @@ namespace CleanThatCode.Community.Tests
 
             _postRepoMock = new PostRepository(cleanThatCodeDbContextMoq.Object);
         }
+
+        [TestMethod]
+        public void  GetAllPosts_NoFilter_ShouldContainAListOfThree()
+        {
+            var results = _postRepoMock.GetAllPosts("", "");
+            Assert.AreEqual(3, results.Count());
+        }
     }
 }
