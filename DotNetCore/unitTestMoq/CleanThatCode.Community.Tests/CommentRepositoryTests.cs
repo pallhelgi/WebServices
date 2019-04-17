@@ -26,5 +26,11 @@ namespace CleanThatCode.Community.Tests
             Assert.AreEqual(0, results.Count());
                     
         }
+
+        public void GetAllCommentsByPostId_GivenValidPostId_ShouldReturnTwoComments()
+        {
+            var results = _commentRepo.GetAllCommentsByPostId(1);
+            Assert.AreEqual(2, results);
+        }
     }
 }
