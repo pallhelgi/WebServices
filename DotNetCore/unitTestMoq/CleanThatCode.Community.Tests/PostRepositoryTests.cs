@@ -37,5 +37,12 @@ namespace CleanThatCode.Community.Tests
             var results = _postRepoMock.GetAllPosts("", "");
             Assert.AreEqual(3, results.Count());
         }
+
+        [TestMethod]
+        public void GetAllPosts_FilteredByTitle_ShouldContainAListOfTwo()
+        {
+            var results = _postRepoMock.GetAllPosts("Greyskull", "");
+            Assert.AreEqual(2, results.Count());
+        }
     }
 }
